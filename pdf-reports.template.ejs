@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .wrapper {
+      width: 1200px;
+      margin: 50px;
+    }
+    tr th {
+      padding: 10px;
+      font-size: 12px;
+    }
+    tr td {
+      padding: 10px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <h3><%= title  %> </h1>
+    <p><%= description %> </p>
+    <table>
+      <thead>
+        <tr>
+          <% headers.forEach(function(head, idx) { %>
+            <th><%= head %></th>
+          <% }); %>
+        </tr>
+      </thead>
+      <tbody>
+        <% body.forEach(function(rowObj,idx) { %>
+          <tr>
+            <% Object.keys(rowObj).forEach(function(key) {%>
+              <td><%= rowObj[key] %> </td>
+            <% }); %>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
