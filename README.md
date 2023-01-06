@@ -1,4 +1,3 @@
-This project contains two challenges - a "Ticket Breakdown" challenge and a "Refactoring" challenge. The two challenges are unrelated, but you should complete both in the same folder and share the link in Coderbyte. Any written answers should be included in markdown files within this folder.
 
 
 ## [Ticket Breakdown](Ticket_Breakdown.md) Solution
@@ -13,10 +12,9 @@ This project contains two challenges - a "Ticket Breakdown" challenge and a "Ref
 9. [Generated Reports PDF Samples](https://github.com/Moses-763/clipboard-health/blob/main/report.pdf)
 
 
-## [Refactoring](Refactoring.md)
-
-If you are a JS novice, here's how to get started:
-1. [Install Node.js](https://nodejs.org/en/download/) (we use `^16`, the latest LTS)
-2. Run `npm i` in this repo to install dependencies
-3. Run `npm test` to run the automated tests
-4. Run `npm start` to launch `index.js` for any manual testing
+## [Refactoring](Refactoring.md) Solution
+1. Two functions are created for possible two use cases
+2. processEventPartitionKey function: should run if event partition key is provided
+3. processPartitionByLength function: should process by default if event partition key is not provided
+4. Run `yarn test` to run the automated tests
+5. Run `yarn start` to launch `index.js` for any manual testing
