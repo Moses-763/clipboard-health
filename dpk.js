@@ -6,14 +6,25 @@ exports.deterministicPartitionKey = (event) => {
   let candidate;
 
   if (event) {
-    if (event.partitionKey) {
-      candidate = event.partitionKey;
-    } else {
-      const data = JSON.stringify(event);
-      candidate = crypto.createHash("sha3-512").update(data).digest("hex");
-    }
+    return processEventPartitionKey(event);
+  } else {
+    return processPartitionByLength(candidate, TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH)
   }
+};
 
+// should run if event partition key is provided
+const processEventPartitionKey = (event) => {
+  if (event.partitionKey) {
+    candidate = event.partitionKey;
+    return crypto.createHash("sha3-512").update(candidate).digest("hex");
+  } else {
+    const data = JSON.stringify(event);
+    return crypto.createHash("sha3-512").update(data).digest("hex");
+  }
+}
+
+// should process by default if event partition key is not provided
+const processPartitionByLength = (candidate, TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH) => {
   if (candidate) {
     if (typeof candidate !== "string") {
       candidate = JSON.stringify(candidate);
@@ -25,4 +36,4 @@ exports.deterministicPartitionKey = (event) => {
     candidate = crypto.createHash("sha3-512").update(candidate).digest("hex");
   }
   return candidate;
-};
+}
