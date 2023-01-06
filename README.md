@@ -9,6 +9,7 @@ This project contains two challenges - a "Ticket Breakdown" challenge and a "Ref
 5. Unit testing was written (ticket-breakdown.test.js) for testing getShiftsByFacilityId and generateReports.
 6. Run yarn test to run test
 7. Run yarn start to getShiftsByFacilityId and generateReports
+8. The report generated file is report.pdf
 
 ## [Refactoring](Refactoring.md)
 
