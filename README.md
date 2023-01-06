@@ -10,7 +10,7 @@ This project contains two challenges - a "Ticket Breakdown" challenge and a "Ref
 6. Run yarn test to run test
 7. Run yarn start to getShiftsByFacilityId and generateReports
 8. The report generated file is report.pdf
-9. [Generated Reports](https://github.com/Moses-763/clipboard-health/blob/main/report.pdf)
+9. [Generated Reports PDF Samples](https://github.com/Moses-763/clipboard-health/blob/main/report.pdf)
 
 
 ## [Refactoring](Refactoring.md)
