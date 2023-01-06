@@ -6,7 +6,7 @@ exports.deterministicPartitionKey = (event) => {
   let candidate;
 
   if (event) {
-    return processEventPartitionKey(event);
+    return processEventPartitionKey(event, candidate);
   } else {
     return processPartitionByLength(candidate, TRIVIAL_PARTITION_KEY, MAX_PARTITION_KEY_LENGTH)
   }
