@@ -1,7 +1,7 @@
 This project contains two challenges - a "Ticket Breakdown" challenge and a "Refactoring" challenge. The two challenges are unrelated, but you should complete both in the same folder and share the link in Coderbyte. Any written answers should be included in markdown files within this folder.
 
 
-## [Ticket Breakdown](Ticket_Breakdown.md)
+## [Ticket Breakdown](Ticket_Breakdown.md) Solution
 1. Ticket breakdown file was created (ticket-breakdown.js);
 2. getShiftByFacility function was created to fetch shifts by facilityId
 3. generateReports function was also created for generating reports;
