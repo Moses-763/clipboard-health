@@ -2,6 +2,13 @@ This project contains two challenges - a "Ticket Breakdown" challenge and a "Ref
 
 
 ## [Ticket Breakdown](Ticket_Breakdown.md)
+1. Ticket breakdown file was created (ticket-breakdown.js);
+2. getShiftByFacility function was created to fetch shifts by facilityId
+3. generateReports function was also created for generating reports;
+4. Json data was generated for representing Shifts, Agents and Facility database
+5. Unit testing was written (ticket-breakdown.test.js) for testing getShiftsByFacilityId and generateReports.
+6. Run yarn test to run test
+7. Run yarn start to getShiftsByFacilityId and generateReports
 
 ## [Refactoring](Refactoring.md)
 

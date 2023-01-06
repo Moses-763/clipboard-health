@@ -51,5 +51,6 @@ const getAllShifts = () => {
 module.exports = {
   getShiftsByFacility,
   generateReports,
+  getAllShifts,
 }
 
