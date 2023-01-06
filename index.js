@@ -1,5 +1,6 @@
 const {deterministicPartitionKey} = require("./dpk");
 const { getShiftsByFacility, generateReports } = require('./ticket-breakdown');
+const { Facililties } = require('./data');
 
 // Refactoring
 const partitionKey = '7e30d7794325966fb061dc3e21ceeb563004';

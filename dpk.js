@@ -13,7 +13,7 @@ exports.deterministicPartitionKey = (event) => {
 };
 
 // should run if event partition key is provided
-const processEventPartitionKey = (event) => {
+const processEventPartitionKey = (event, candidate) => {
   if (event.partitionKey) {
     candidate = event.partitionKey;
     return crypto.createHash("sha3-512").update(candidate).digest("hex");
